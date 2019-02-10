@@ -6,6 +6,7 @@ using Catalyst.Services;
 using Catalyst.Utilities;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Configuration;
 
 namespace Catalyst.Controllers
 {
@@ -13,10 +14,12 @@ namespace Catalyst.Controllers
     [ApiController]
     public class EmailTestController : ControllerBase
     {
+        private IConfiguration _config;
         private IEmailer _emailer;
 
-        public EmailTestController(IEmailer emailer)
+        public EmailTestController(IEmailer emailer, IConfiguration config)
         {
+            _config = config;
             _emailer = emailer;
         }
 
@@ -25,7 +28,7 @@ namespace Catalyst.Controllers
         [ProducesResponseType(401)]
         public async Task<ActionResult> Post([FromBody] string email)
         {
-            if (AuthorizationUtils.Authorized(Request) == false)
+            if (AuthorizationUtils.Authorized(Request, _config) == false)
             {
                 return Unauthorized();
             }

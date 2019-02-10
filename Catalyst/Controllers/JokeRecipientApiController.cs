@@ -7,6 +7,7 @@ using Catalyst.Services;
 using Catalyst.Utilities;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Configuration;
 
 namespace Catalyst.Controllers
 {
@@ -14,10 +15,12 @@ namespace Catalyst.Controllers
     [ApiController]
     public class JokeRecipientApiController : ControllerBase
     {
+        private IConfiguration _config;
         private IJokeRecipientData _data;
 
-        public JokeRecipientApiController(IJokeRecipientData data)
+        public JokeRecipientApiController(IJokeRecipientData data, IConfiguration config)
         {
+            _config = config;
             _data = data;
         }
 
@@ -26,7 +29,7 @@ namespace Catalyst.Controllers
         [ProducesResponseType(401)]
         public async Task<ActionResult> Post([FromBody] JokeRecipient recipient)
         {
-            if (AuthorizationUtils.Authorized(Request) == false)
+            if (AuthorizationUtils.Authorized(Request, _config) == false)
             {
                 return Unauthorized();
             }
@@ -50,7 +53,7 @@ namespace Catalyst.Controllers
         [HttpDelete("{id}")]
         public ActionResult Delete(int id)
         {
-            if (AuthorizationUtils.Authorized(Request) == false)
+            if (AuthorizationUtils.Authorized(Request, _config) == false)
             {
                 return Unauthorized();
             }
