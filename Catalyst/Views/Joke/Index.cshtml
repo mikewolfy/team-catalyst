@@ -1,0 +1,33 @@
+﻿@model IEnumerable<Catalyst.Models.Joke>
+
+@{
+    ViewData["Title"] = "Juan's Jokes";
+}
+
+<h2>Juan's Jokes</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Joke
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Punchline)
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+  
+        <tr>
+            <td>
+                <h3>@Html.DisplayFor(modelItem => item.JokeText)</h3>
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Punchline)
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

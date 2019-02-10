@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2050
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Catalyst", "Catalyst\Catalyst.csproj", "{A7CBB5B7-D068-4F51-A049-E9768A58F82E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A7CBB5B7-D068-4F51-A049-E9768A58F82E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A7CBB5B7-D068-4F51-A049-E9768A58F82E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A7CBB5B7-D068-4F51-A049-E9768A58F82E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A7CBB5B7-D068-4F51-A049-E9768A58F82E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {19DF9AE5-13FC-47FF-B4FF-E0412FCDD8D3}
+	EndGlobalSection
+EndGlobal
