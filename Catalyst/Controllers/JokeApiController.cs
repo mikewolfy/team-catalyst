@@ -51,13 +51,13 @@ namespace Catalyst.Controllers
 
         // DELETE: api/ApiWithActions/5
         [HttpDelete("{id}")]
-        public ActionResult Delete(int id)
+        public async Task<ActionResult> Delete(int id)
         {
             if (AuthorizationUtils.Authorized(Request, _config) == false)
             {
                 return Unauthorized();
             }
-            _data.Delete(id);
+            await _data.Delete(id);
             return Ok();
         }
     }
