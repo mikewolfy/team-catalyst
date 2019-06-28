@@ -40,7 +40,7 @@ namespace Catalyst.Services
             var builder = new StringBuilder();
             builder.Append($"<h1>{joke.Text}</h1><br/><br/>{joke.Punchline}");
             builder.Append("<br/><br/>");
-            builder.Append("<img src=\"https://teamcatalyst.azurewebsites.net/images/juan.png\" width=\"200\" height=\"160\">");
+            builder.Append("<img src=\"https://teamcatalyst.azurewebsites.net/images/juan.and.interns.cropped.small.png\" width=\"200\" height=\"160\">");
             builder.Append("<br/><br/>");
             var siteUrl = _config["SiteUrl"];
             builder.Append($"<p><small>For more jokes visit the <a href=\"{siteUrl}\">Jokes Site</a>.</small></p>");
