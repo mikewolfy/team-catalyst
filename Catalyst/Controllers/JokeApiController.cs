@@ -46,7 +46,7 @@ namespace Catalyst.Controllers
         public async Task<IEnumerable<Joke>> Get()
         {
             var jokes = await _data.GetAll();
-            return (jokes.OrderByDescending(j => j.Id)ToList());
+            return jokes.OrderByDescending(j => j.Id).ToList();
         }
 
         // DELETE: api/ApiWithActions/5
