@@ -1,4 +1,5 @@
-﻿using Catalyst.Models;
+﻿using Catalyst.Helpers;
+using Catalyst.Models;
 using Microsoft.Extensions.Configuration;
 using SendGrid;
 using SendGrid.Helpers.Mail;
@@ -37,10 +38,11 @@ namespace Catalyst.Services
 
             msg.SetSubject("Juan has a new joke for you");
 
+            var imageName = PhotoRandomizer.GetRandomJuanImage();
             var builder = new StringBuilder();
             builder.Append($"<h1>{joke.Text}</h1><br/><br/>{joke.Punchline}");
             builder.Append("<br/><br/>");
-            builder.Append("<img src=\"https://teamcatalyst.azurewebsites.net/images/juan.interns.hawaii.png\" width=\"200\" height=\"160\">");
+            builder.Append("<img src=\"https://teamcatalyst.azurewebsites.net/images/" + imageName + "\" width=\"200\" height=\"160\">");
             builder.Append("<br/><br/>");
             var siteUrl = _config["SiteUrl"];
             builder.Append($"<p><small>For more jokes visit the <a href=\"{siteUrl}\">Jokes Site</a>.</small></p>");
