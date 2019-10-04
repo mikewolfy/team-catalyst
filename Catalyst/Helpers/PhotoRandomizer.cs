@@ -14,7 +14,7 @@ namespace Catalyst.Helpers
                 "juan.png",
                 "juan.max.michael.png"
             };
-            var randomIndex = new Random().Next(0, imageNames.Count() - 1);
+            var randomIndex = new Random().Next(0, imageNames.Count());
             return imageNames[randomIndex];
         }
     }
