@@ -1,8 +1,12 @@
-## Welcome to GitHub Pages
+## Welcome to the Team Catalyst Site
 
 You can use the [editor on GitHub](https://github.com/mikewolfy/team-catalyst/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
 
 Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+
+### Jokes API
+
+[Jokes API](./docs/jokes.api.md) was built to have fun as a team.
 
 ### Markdown
 
