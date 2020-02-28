@@ -12,7 +12,9 @@ namespace Catalyst.Helpers
             var imageNames = new List<string>() {
                 "juan.interns.hawaii.png",
                 "juan.png",
-                "juan.max.michael.png"
+                "juan.max.michael.png",
+                "james.juan.png",
+                "juan.james.joshua.png"
             };
             var randomIndex = new Random().Next(0, imageNames.Count());
             return imageNames[randomIndex];
