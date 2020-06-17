@@ -12,7 +12,7 @@ namespace Catalyst.Helpers
             var imageNames = new List<string>() {
                 "juan.interns.hawaii.png",
                 "juan.png",
-                "juan.max.michael.png",
+                "juan.face.png",
                 "james.juan.png",
                 "juan.james.joshua.png"
             };
