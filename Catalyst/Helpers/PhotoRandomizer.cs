@@ -14,9 +14,11 @@ namespace Catalyst.Helpers
                 "juan.png",
                 "juan.face.png",
                 "james.juan.png",
-                "juan.james.joshua.png"
+                "juan.hawaii.png",
+                "juan.james.joshua.png",
+                "msbuild.png"
             };
-            var randomIndex = new Random().Next(0, imageNames.Count());
+            var randomIndex = new Random().Next(imageNames.Count());
             return imageNames[randomIndex];
         }
     }
